@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Card from './Card';
+import PropTypes from 'prop-types'
 
 const Cards = props => {
   return (
@@ -7,7 +8,7 @@ const Cards = props => {
       {/* Using the cards prop, map over the list creating a 
           new Card component for each passing the card as the only prop*/}
         {props.cards.map( card => {
-          return <Card card={card} />
+          return <Card  card={card} />
         })}
 
     </div>
@@ -15,5 +16,13 @@ const Cards = props => {
 }
 
 // Make sure you include prop types for all of your incoming props
+Cards.propType = {
+  Cards: PropTypes.shape({
+    headline: PropTypes.string,
+    tab: PropTypes.string,
+    img: PropTypes.string,
+    author: PropTypes.string
+  })
+}
 
 export default Cards;
