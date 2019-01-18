@@ -6,7 +6,7 @@ const Tabs = props => {
       <div className="topics">
         <span className="title">TRENDING TOPICS:</span>
           {props.tabs.map(tab => {
-            return <Tab key={tab.node} tab={tab} />
+            return <Tab key={tab.node} tab={props.tab} selectedTab={props.selectedTab} selectTabHandler={props.selectTabHandler}/>
           })}
       </div>
     </div>
@@ -14,6 +14,11 @@ const Tabs = props => {
 };
 
 // Make sure to use PropTypes to validate your types!
+
+
+// Tabs.propTypes = {
+
+// }
 export default Tabs;
 
 
