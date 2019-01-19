@@ -18,7 +18,7 @@ export default class Content extends Component {
 
   componentDidMount() {
     console.log('mount?')
-    this.setState({selected: 'all', tabs: tabData, cards: cardData})
+    this.setState({ selected: 'all', tabs: tabData, cards: cardData})
     // Once the component has mounted, get the data and reflect that data on the state.
   }
 
